@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+//* Global *//
+* {
+    padding: 0;
+    margin: 0;
+}
+
+//* Colors *//
+
+//### Primary
+
+$veryDarkBlue: hsl(233, 47%, 7%);
+$darkDesaturatedBlue: hsl(244, 38%, 16%);
+$doftViolet: hsl(277, 64%, 61%);
+$doftViolet2: hsl(277, 75%, 33%);
+
+//### Neutral
+
+$white: hsl(0, 0%, 100%);
+$slightlyTransparentWhite: hsla(0, 0%, 100%, 0.75);
+$slightlyTransparentWhiteHead: hsla(0, 0%, 100%, 0.6);
+
+
+//* Layout *//
+body {
+    background-color: $veryDarkBlue;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 1100px;
+    height: 100vh;
+}
+
+.card-hero {
+    border: none;
+    color: $white;
+    & h1 {
+        font-weight: 700;
+        padding: 15px 0;
+    }
+    & h3 {
+        font-weight: 700;
+    }
+    & p {
+        color: $slightlyTransparentWhiteHead;
+        font-size: 1em;
+        line-height: 1.8em;
+    }
+    & span {
+        color: $doftViolet;
+    }
+}
+
+.card-body {
+    padding: 25px 60px;  
+    border-radius: 10px 0 0 10px;
+    background-color: $darkDesaturatedBlue;
+}
+
+.card-image {
+    border-radius: 0 10px 10px 0;
+    background-color: $doftViolet2;
+}
+
+img {
+    opacity: 0.5;
+}
+
+.img-fluid {
+    border-radius: 0 10px 10px 0;
+}
+
+small {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $slightlyTransparentWhiteHead;
+    font-weight: 400;
+}
+
+.attribution { 
+    font-size: 1em; 
+    text-align: center; 
+    color: $white;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 992px) {
+    .container {
+        height: 100%;
+        padding: 100px 50px;
+    }
+    .row {
+        max-width: 500px;
+        margin: auto;
+    }
+    .card-body {
+        text-align: center;
+        border-radius: 0 0 10px 10px;
+    }
+    .card-image,
+    .img-fluid {
+        border-radius: 10px 10px 0 0;
+    }
+    h1 {
+        font-size: 2em;
+    }
+}
